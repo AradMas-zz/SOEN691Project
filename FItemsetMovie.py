@@ -49,5 +49,4 @@ mf=mf.join(mf2, mf.consequent == mf2.items, 'inner')
 mf=mf.select(mf.antecedent,mf.consequent,mf.confidence,mf2.items,mf2.freq,
              (mf.confidence-(mf2["freq"]/dfCount)).alias('interest'))\
              .sort(desc("count"),desc("interest"))
-mf.show(1000)
-print(mf.count())
+mf.show(n)
