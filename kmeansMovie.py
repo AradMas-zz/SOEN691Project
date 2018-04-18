@@ -7,9 +7,9 @@ from scipy.spatial import distance
 sparkConf=SparkConf().setAppName("").setMaster("local")
 sc = SparkContext(conf = sparkConf)
 
-data_file1="D:/tag-genomeVir/movies.dat"
-data_file2="D:/tag-genomeVir/tags.dat"
-data_file3="D:/tag-genomeVir/tag_relevance.dat"
+data_file1="D:/movies.dat"
+data_file2="D:/tags.dat"
+data_file3="D:/tag_relevance.dat"
 output_file="D:/result.txt"
 k="5"
 random_seed="123"
