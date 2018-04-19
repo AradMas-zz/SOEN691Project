@@ -34,6 +34,7 @@ for x in ratingsRDD.collect():
         if x.rating>3:
             tagMovArr.append(x.movieId)
         tmpUserId=x.userId
+userArr.append([tmpUserId,tagMovArr])
 rdd = sc.parallelize(userArr) 
 df_raw = spark.createDataFrame(rdd)
 
